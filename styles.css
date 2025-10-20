@@ -104,9 +104,8 @@ textarea:focus {
   max-width: 100%;
   padding: 0.75rem;
   border: 1px solid #d1d5db;
-  /* gray-300 */
   border-radius: 0.5rem;
-  /* rounded-lg */
+  
   transition: border-color 0.2s;
 }
 
@@ -137,13 +136,12 @@ textarea:focus {
   background-color: var(--primary-dark-hover);
 }
 
-/* Error and Success Messages */
 .error-message {
   color: var(--error-color);
   font-size: 0.875rem;
   margin-top: 0.25rem;
   display: none;
-  /* Hidden by default */
+  
 }
 
 .success-message {
@@ -151,14 +149,13 @@ textarea:focus {
   margin-top: 1.5rem;
   border: 2px solid var(--success-color);
   background-color: #d1fae5;
-  /* emerald-100 */
+  
   color: var(--success-color);
   font-weight: 600;
   border-radius: 0.5rem;
   text-align: center;
 }
 
-/* --- About Page Styles --- */
 .about-section {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
