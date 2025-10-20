@@ -1,341 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Page Profile Application</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Page Profile Application</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <div class="app-container">
+  <div class="app-container">
 
-        <nav class="nav-bar" aria-label="Main Application Navigation">
-            <a href="#profile" class="nav-link active" data-page="profile">Profile Card</a>
-            <a href="#contact" class="nav-link" data-page="contact">Contact Us</a>
-            <a href="#about" class="nav-link" data-page="about">About Me</a>
-        </nav>
+    <nav class="nav-bar" aria-label="Main Application Navigation">
+      <a href="#profile" class="nav-link active" data-page="profile">Profile Card</a>
+      <a href="#contact" class="nav-link" data-page="contact">Contact Us</a>
+      <a href="#about" class="nav-link" data-page="about">About Me</a>
+    </nav>
 
-        <article 
-            id="page-profile"
-            data-testid="test-profile-card"
-            class="profile-card"
-        >
-            <div class="main-content-layout">
-                <figure class="avatar-figure">
-                    <img 
-                        data-testid="test-user-avatar"
-                        src="https://avatars.githubusercontent.com/u/56235240?v=4"
-                        alt="Profile photo of the user, Draq The Beast."
-                        class="avatar-img"
-                        onerror="this.onerror=null;this.src='https://placehold.co/160x160/374151/ffffff?text=Error';"
-                    />
-                </figure>
-                <div class="text-content">
-                    <header class="header-content">
-                        <h2 
-                            data-testid="test-user-name"
-                            aria-label="User Name: Draq The Beast"
-                            class="user-name"
-                        >
-                            Draq The Beast
-                        </h2>
-                        <div class="time-display">
-                            Current Time (ms): <span data-testid="test-user-time" class="time-value">Loading...</span>
-                        </div>
-                    </header>
-                    <p 
-                        data-testid="test-user-bio"
-                        class="bio-paragraph"
-                    >
-                    Throughout heaven and earth, I alone am the honored one - or whatever it is Gojo said. I am <span class="highlight"> Draq </span> - I am your nemesis - in the words of Akaza, show me your fighting spirit, if you're worthy, I might just make a donut out of you. 😈
-                    </p>
-                </div>
+    <article id="page-profile" data-testid="test-profile-card" class="profile-card">
+      <div class="main-content-layout">
+        <figure class="avatar-figure">
+          <img data-testid="test-user-avatar" src="https://avatars.githubusercontent.com/u/56235240?v=4"
+            alt="Profile photo of the user, Draq The Beast." class="avatar-img"
+            onerror="this.onerror=null;this.src='https://placehold.co/160x160/374151/ffffff?text=Error';" />
+        </figure>
+        <div class="text-content">
+          <header class="header-content">
+            <h2 data-testid="test-user-name" aria-label="User Name: Draq The Beast" class="user-name">
+              Draq The Beast
+            </h2>
+            <div class="time-display">
+              Current Time (ms): <span data-testid="test-user-time" class="time-value">Loading...</span>
             </div>
+          </header>
+          <p data-testid="test-user-bio" class="bio-paragraph">
+            Throughout heaven and earth, I alone am the honored one - or whatever it is Gojo said. I am <span
+              class="highlight"> Draq </span> - I am your nemesis - in the words of Akaza, show me your fighting spirit,
+            if you're worthy, I might just make a donut out of you. 😈
+          </p>
+        </div>
+      </div>
 
-            <hr class="divider" />
+      <hr class="divider" />
 
-            <nav 
-                data-testid="test-user-social-links"
-                aria-label="User Social Media and Contact Links"
-                class="social-nav"
-            >
-                <h3 class="connect-heading">Connect</h3>
-                <ul class="social-list">
-                    <li>
-                        <a 
-                            data-testid="test-user-social-github" 
-                            href="https://github.com/draqist" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="social-link"
-                        >
-                            <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.887-.013-1.745-2.787.604-3.374-1.341-3.374-1.341-.454-1.156-1.11-1.464-1.11-1.464-.908-.618.069-.607.069-.607 1.004.07 1.532 1.03 1.532 1.03.89 1.528 2.336 1.087 2.903.832.091-.647.349-1.087.635-1.339-2.227-.253-4.568-1.115-4.568-4.945 0-1.09.39-1.983 1.029-2.68a3.78 3.78 0 01.097-2.634s.84-.268 2.75 1.029a9.58 9.58 0 015.029 0c1.91-1.297 2.75-1.029 2.75-1.029.034.254.127.514.246.758A4.1 4.1 0 0117.9 12.017c0 3.842-2.345 4.69-4.577 4.943.355.305.672.935.672 1.889 0 1.366-.013 2.463-.013 2.795 0 .269.18.579.688.481C21.137 20.198 24 16.443 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a 
-                            data-testid="test-user-social-linkedin" 
-                            href="https://linkedin.com/in/abdullah-abdulfatah-125189209" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="social-link"
-                        >
-                            <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.366-4-3.235-4 0v5.604h-3v-11h3v1.765c1.395-2.316 5-2.103 5 2.504v6.731z"/>
-                            </svg>
-                            LinkedIn
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+      <nav data-testid="test-user-social-links" aria-label="User Social Media and Contact Links" class="social-nav">
+        <h3 class="connect-heading">Connect</h3>
+        <ul class="social-list">
+          <li>
+            <a data-testid="test-user-social-github" href="https://github.com/draqist" target="_blank"
+              rel="noopener noreferrer" class="social-link">
+              <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.887-.013-1.745-2.787.604-3.374-1.341-3.374-1.341-.454-1.156-1.11-1.464-1.11-1.464-.908-.618.069-.607.069-.607 1.004.07 1.532 1.03 1.532 1.03.89 1.528 2.336 1.087 2.903.832.091-.647.349-1.087.635-1.339-2.227-.253-4.568-1.115-4.568-4.945 0-1.09.39-1.983 1.029-2.68a3.78 3.78 0 01.097-2.634s.84-.268 2.75 1.029a9.58 9.58 0 015.029 0c1.91-1.297 2.75-1.029 2.75-1.029.034.254.127.514.246.758A4.1 4.1 0 0117.9 12.017c0 3.842-2.345 4.69-4.577 4.943.355.305.672.935.672 1.889 0 1.366-.013 2.463-.013 2.795 0 .269.18.579.688.481C21.137 20.198 24 16.443 24 12.017 24 6.484 19.522 2 14 2h-2z"
+                  clip-rule="evenodd" />
+              </svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a data-testid="test-user-social-linkedin" href="https://linkedin.com/in/abdullah-abdulfatah-125189209"
+              target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.366-4-3.235-4 0v5.604h-3v-11h3v1.765c1.395-2.316 5-2.103 5 2.504v6.731z" />
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-            <hr class="divider" />
+      <hr class="divider" />
 
-            <div class="lists-container">
-                <section class="list-section">
-                    <h3 class="list-heading">Hobbies</h3>
-                    <ul data-testid="test-user-hobbies" class="info-list">
-                        <li class="list-item">Building interactive web interfaces</li>
-                        <li class="list-item">Watching and reading tuff manga</li>
-                        <li class="list-item">Going on random 10km jogs at 10pm in the night</li>
-                        <li class="list-item">Finding the love of my life</li>
-                    </ul>
-                </section>
-                
-                <section class="list-section">
-                    <h3 class="list-heading">Dislikes</h3>
-                    <ul data-testid="test-user-dislikes" class="info-list">
-                        <li class="list-item">Talking</li>
-                        <li class="list-item">Being talked to when not in the mood</li>
-                        <li class="list-item">People who are not fun</li>
-                        <li class="list-item">Being poor</li>
-                    </ul>
-                </section>
-            </div>
-        </article>
+      <div class="lists-container">
+        <section class="list-section">
+          <h3 class="list-heading">Hobbies</h3>
+          <ul data-testid="test-user-hobbies" class="info-list">
+            <li class="list-item">Building interactive web interfaces</li>
+            <li class="list-item">Watching and reading tuff manga</li>
+            <li class="list-item">Going on random 10km jogs at 10pm in the night</li>
+            <li class="list-item">Finding the love of my life</li>
+          </ul>
+        </section>
 
-        <main id="page-contact" class="hidden" role="region" aria-labelledby="contact-heading">
-            <h2 id="contact-heading" class="user-name" style="margin-bottom: 2rem;">Contact Draq The Beast</h2>
-            <form id="contact-form" onsubmit="return validateForm(event)">
-                
-                <div class="form-group">
-                    <label for="fullName" class="form-label">Full Name</label>
-                    <input 
-                        type="text" 
-                        id="fullName" 
-                        name="fullName" 
-                        data-testid="test-contact-name"
-                        class="form-input" 
-                        required 
-                        aria-describedby="error-name"
-                    >
-                    <div id="error-name" data-testid="test-contact-error-name" class="error-message">Full name is required.</div>
-                </div>
+        <section class="list-section">
+          <h3 class="list-heading">Dislikes</h3>
+          <ul data-testid="test-user-dislikes" class="info-list">
+            <li class="list-item">Talking</li>
+            <li class="list-item">Being talked to when not in the mood</li>
+            <li class="list-item">People who are not fun</li>
+            <li class="list-item">Being poor</li>
+          </ul>
+        </section>
+      </div>
+    </article>
 
-                <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        data-testid="test-contact-email"
-                        class="form-input" 
-                        required 
-                        aria-describedby="error-email"
-                    >
-                    <div id="error-email" data-testid="test-contact-error-email" class="error-message">A valid email is required (e.g., name@example.com).</div>
-                </div>
+    <main id="page-contact" class="hidden" role="region" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="user-name" style="margin-bottom: 2rem;">Contact Draq The Beast</h2>
+      <form id="contact-form" onsubmit="return validateForm(event)">
 
-                <div class="form-group">
-                    <label for="subject" class="form-label">Subject</label>
-                    <input 
-                        type="text" 
-                        id="subject" 
-                        name="subject" 
-                        data-testid="test-contact-subject"
-                        class="form-input" 
-                        required 
-                        aria-describedby="error-subject"
-                    >
-                    <div id="error-subject" data-testid="test-contact-error-subject" class="error-message">Subject is required.</div>
-                </div>
+        <div class="form-group">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" id="fullName" name="fullName" data-testid="test-contact-name" class="form-input" required
+            aria-describedby="error-name">
+          <div id="error-name" data-testid="test-contact-error-name" class="error-message">Full name is required.</div>
+        </div>
 
-                <div class="form-group">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea 
-                        id="message" 
-                        name="message" 
-                        data-testid="test-contact-message"
-                        class="form-textarea" 
-                        required 
-                        aria-describedby="error-message-length"
-                    ></textarea>
-                    <div id="error-message-length" data-testid="test-contact-error-message" class="error-message">Message must be at least 10 characters long.</div>
-                </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" name="email" data-testid="test-contact-email" class="form-input" required
+            aria-describedby="error-email">
+          <div id="error-email" data-testid="test-contact-error-email" class="error-message">A valid email is required
+            (e.g., name@example.com).</div>
+        </div>
 
-                <button 
-                    type="submit" 
-                    data-testid="test-contact-submit"
-                    class="submit-button"
-                >
-                    Send Message
-                </button>
-            </form>
+        <div class="form-group">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" id="subject" name="subject" data-testid="test-contact-subject" class="form-input" required
+            aria-describedby="error-subject">
+          <div id="error-subject" data-testid="test-contact-error-subject" class="error-message">Subject is required.
+          </div>
+        </div>
 
-            <div id="contact-success" data-testid="test-contact-success" class="success-message hidden" style="display: none;">
-                Thank you, Draq has received your message. You may now be worthy.
-            </div>
-        </main>
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" data-testid="test-contact-message" class="form-textarea" required
+            aria-describedby="error-message-length"></textarea>
+          <div id="error-message-length" data-testid="test-contact-error-message" class="error-message">Message must be
+            at least 10 characters long.</div>
+        </div>
 
-        <main 
-            id="page-about"
-            data-testid="test-about-page"
-            class="hidden"
-            role="region"
-            aria-labelledby="about-heading"
-            style="display: none;"
-        >
-            <h2 id="about-heading" class="user-name" style="margin-bottom: 2rem;">My Reflections & Goals</h2>
+        <button type="submit" data-testid="test-contact-submit" class="submit-button">
+          Send Message
+        </button>
+      </form>
 
-            <section data-testid="test-about-bio" class="about-section">
-                <h3 class="about-heading">My Current Reality</h3>
-                <p>My existing profile bio covers the "beast" part—the relentless energy and high standards. But the true bio is simpler: I'm a frontend developer driven by pure spite against inefficient layout and poor UX. My silence is not aloofness; it's intense focus. I turn caffeine into clean, semantic markup.</p>
-            </section>
-            
-            <section data-testid="test-about-goals" class="about-section">
-                <h3 class="about-heading">Goals in HNG</h3>
-                <ul class="info-list">
-                    <li class="list-item">Mastering advanced accessibility patterns (ARIA, keyboard navigation, screen reader testing).</li>
-                    <li class="list-item">Becoming fluent in complex CSS Grid/Flexbox interactions for highly dynamic, responsive interfaces.</li>
-                    <li class="list-item">Building robust, highly performant web applications that could run on a literal potato.</li>
-                </ul>
-            </section>
-            
-            <section data-testid="test-about-confidence" class="about-section">
-                <h3 class="about-heading">Areas of Low Confidence</h3>
-                <p>While I can brute-force almost any layout, deep-dive performance optimization, especially around bundle splitting and complex Webpack/Rollup configurations, sometimes feels like fighting a black hole. Also, keeping up with the JavaScript framework churn is a full-time job in itself.</p>
-            </section>
-            
-            <section data-testid="test-about-future-note" class="about-section">
-                <h3 class="about-heading">A Note to Future Self</h3>
-                <p>Hey, Draq. Remember this feeling—the grind. Never forget the simple truth: you write code for users, not compilers. Don't be too much of a Tsukishima; occasionally, share your knowledge. And for the love of all that is holy, stick to one framework for more than six months.</p>
-            </section>
+      <div id="contact-success" data-testid="test-contact-success" class="success-message hidden"
+        style="display: none;">
+        Thank you, Draq has received your message. You may now be worthy.
+      </div>
+    </main>
 
-            <section data-testid="test-about-extra" class="about-section">
-                <h3 class="about-heading">Extra Thoughts</h3>
-                <p>The "love of my life" hobby is an ongoing ticket. If anyone finds a human who appreciates a beautifully centered modal and commits at 3 AM, please submit a pull request.</p>
-            </section>
-        </main>
-    </div>
+    <main id="page-about" data-testid="test-about-page" class="hidden" role="region" aria-labelledby="about-heading"
+      style="display: none;">
+      <h2 id="about-heading" class="user-name" style="margin-bottom: 2rem;">My Reflections & Goals</h2>
 
-    <script type="text/javascript">
+      <section data-testid="test-about-bio" class="about-section">
+        <h3 class="about-heading">My Current Reality</h3>
+        <p>My existing profile bio covers the "beast" part—the relentless energy and high standards. But the true bio is
+          simpler: I'm a frontend developer driven by pure spite against inefficient layout and poor UX. My silence is
+          not aloofness; it's intense focus. I turn caffeine into clean, semantic markup.</p>
+      </section>
 
-        function updateTime() {
-            const timeElement = document.querySelector('[data-testid="test-user-time"]');
-            if (timeElement) {
-                timeElement.textContent = Date.now().toString();
-            }
+      <section data-testid="test-about-goals" class="about-section">
+        <h3 class="about-heading">Goals in HNG</h3>
+        <ul class="info-list">
+          <li class="list-item">Mastering advanced accessibility patterns (ARIA, keyboard navigation, screen reader
+            testing).</li>
+          <li class="list-item">Becoming fluent in complex CSS Grid/Flexbox interactions for highly dynamic, responsive
+            interfaces.</li>
+          <li class="list-item">Building robust, highly performant web applications that could run on a literal potato.
+          </li>
+        </ul>
+      </section>
+
+      <section data-testid="test-about-confidence" class="about-section">
+        <h3 class="about-heading">Areas of Low Confidence</h3>
+        <p>While I can brute-force almost any layout, deep-dive performance optimization, especially around bundle
+          splitting and complex Webpack/Rollup configurations, sometimes feels like fighting a black hole. Also, keeping
+          up with the JavaScript framework churn is a full-time job in itself.</p>
+      </section>
+
+      <section data-testid="test-about-future-note" class="about-section">
+        <h3 class="about-heading">A Note to Future Self</h3>
+        <p>Hey, Draq. Remember this feeling—the grind. Never forget the simple truth: you write code for users, not
+          compilers. Don't be too much of a Tsukishima; occasionally, share your knowledge. And for the love of all that
+          is holy, stick to one framework for more than six months.</p>
+      </section>
+
+      <section data-testid="test-about-extra" class="about-section">
+        <h3 class="about-heading">Extra Thoughts</h3>
+        <p>The "love of my life" hobby is an ongoing ticket. If anyone finds a human who appreciates a beautifully
+          centered modal and commits at 3 AM, please submit a pull request.</p>
+      </section>
+    </main>
+  </div>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+      const timeElement = document.querySelector('[data-testid="test-user-time"]');
+      function updateTime() {
+        if (timeElement) {
+          timeElement.textContent = Date.now().toString();
         }
-        updateTime();
-        setInterval(updateTime, 100);
+      }
+      updateTime();
+      setInterval(updateTime, 100);
 
-        const pages = ['profile', 'contact', 'about'];
-        const navLinks = document.querySelectorAll('.nav-link');
-        const contactForm = document.getElementById('contact-form');
-        const successMessage = document.getElementById('contact-success');
+      const pages = ["profile", "contact", "about"];
+      const navLinks = document.querySelectorAll(".nav-link");
+      const contactForm = document.getElementById("contact-form");
+      const successMessage = document.getElementById("contact-success");
 
-        function showPage(pageId) {
-            pages.forEach(id => {
-                const pageElement = document.getElementById(`page-${id}`);
-                if (pageElement) {
-                    pageElement.style.display = (id === pageId) ? 'block' : 'none';
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('data-page') === pageId) {
-                    link.classList.add('active');
-                }
-            });
-
-            if (pageId !== 'contact') {
-                successMessage.style.display = 'none';
-            }
-        }
-
-        function validateForm(event) {
-            event.preventDefault();
-            let isValid = true;
-            successMessage.style.display = 'none';
-
-            const nameInput = document.getElementById('fullName');
-            const nameError = document.getElementById('error-name');
-            if (nameInput.value.trim() === '') {
-                nameError.style.display = 'block';
-                isValid = false;
-            } else {
-                nameError.style.display = 'none';
-            }
-            
-            const emailInput = document.getElementById('email');
-            const emailError = document.getElementById('error-email');
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(emailInput.value.trim())) {
-                emailError.style.display = 'block';
-                isValid = false;
-            } else {
-                emailError.style.display = 'none';
-            }
-            
-            const subjectInput = document.getElementById('subject');
-            const subjectError = document.getElementById('error-subject');
-            if (subjectInput.value.trim() === '') {
-                subjectError.style.display = 'block';
-                isValid = false;
-            } else {
-                subjectError.style.display = 'none';
-            }
-
-            const messageInput = document.getElementById('message');
-            const messageError = document.getElementById('error-message-length');
-            if (messageInput.value.trim().length < 10) {
-                messageError.style.display = 'block';
-                isValid = false;
-            } else {
-                messageError.style.display = 'none';
-            }
-            if (isValid) {
-                successMessage.style.display = 'block';
-                contactForm.reset();
-            }
-
-            return false;
-        }
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const pageId = link.getAttribute('data-page');
-                showPage(pageId);
-                window.location.hash = pageId;
-            });
+      function showPage(pageId) {
+        pages.forEach((id) => {
+          const pageElement = document.getElementById(`page-${id}`);
+          if (pageElement) {
+            pageElement.style.display = id === pageId ? "block" : "none";
+          }
         });
 
-        contactForm.addEventListener('submit', validateForm);
-
-        window.addEventListener('load', () => {
-            let initialPage = window.location.hash ? window.location.hash.substring(1) : 'profile';
-            if (!pages.includes(initialPage)) {
-                initialPage = 'profile'; 
-            }
-            showPage(initialPage);
+        navLinks.forEach((link) => {
+          link.classList.toggle("active", link.dataset.page === pageId);
         });
-        
-    </script>
+
+        if (pageId !== "contact") {
+          successMessage.style.display = "none";
+        }
+      }
+
+      function validateForm(event) {
+        event.preventDefault();
+
+        // collect inputs and errors
+        const nameInput = document.getElementById("fullName");
+        const emailInput = document.getElementById("email");
+        const subjectInput = document.getElementById("subject");
+        const messageInput = document.getElementById("message");
+
+        const nameError = document.getElementById("error-name");
+        const emailError = document.getElementById("error-email");
+        const subjectError = document.getElementById("error-subject");
+        const messageError = document.getElementById("error-message-length");
+
+        // reset error visibility
+        [nameError, emailError, subjectError, messageError].forEach(
+          (el) => (el.style.display = "none")
+        );
+        successMessage.style.display = "none";
+
+        let isValid = true;
+
+        // name validation
+        if (nameInput.value.trim() === "") {
+          nameError.style.display = "block";
+          isValid = false;
+        }
+
+        // email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value.trim())) {
+          emailError.style.display = "block";
+          isValid = false;
+        }
+
+        // subject validation
+        if (subjectInput.value.trim() === "") {
+          subjectError.style.display = "block";
+          isValid = false;
+        }
+
+        // message validation
+        if (messageInput.value.trim().length < 10) {
+          messageError.style.display = "block";
+          isValid = false;
+        }
+
+        // success
+        if (isValid) {
+          successMessage.style.display = "block";
+          contactForm.reset();
+        }
+      }
+
+      // Bind navigation
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const pageId = link.dataset.page;
+          showPage(pageId);
+          window.location.hash = pageId;
+        });
+      });
+
+      // Bind form
+      if (contactForm) {
+        contactForm.addEventListener("submit", validateForm);
+      }
+
+      // Initialize correct page
+      let initialPage = window.location.hash ? window.location.hash.substring(1) : "profile";
+      if (!pages.includes(initialPage)) {
+        initialPage = "profile";
+      }
+      showPage(initialPage);
+    });
+  </script>
+
 </body>
+
 </html>
