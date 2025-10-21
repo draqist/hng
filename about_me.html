@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Draq The Beast</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Main Application Container -->
+  <div class="app-container">
+
+    <!-- Navigation Bar -->
+    <nav class="nav-bar" aria-label="Main Application Navigation">
+      <a href="index.html" class="nav-link">Profile Card</a>
+      <a href="contact_us.html" class="nav-link">Contact Us</a>
+      <!-- Active link for this page -->
+      <a href="about_me.html" class="nav-link active-page">About Me</a>
+    </nav>
+
+    <!-- ============================================== -->
+    <!-- 3. ABOUT ME PAGE (Stage 1 Task) -->
+    <!-- ============================================== -->
+    <main data-testid="test-about-page" role="region" aria-labelledby="about-heading">
+      <h2 id="about-heading" class="page-heading">My Reflections & Goals</h2>
+
+      <!-- Bio -->
+      <section data-testid="test-about-bio" class="about-section">
+        <h3 class="about-heading">My Current Reality</h3>
+        <p>My existing profile bio covers the "beast" part—the relentless energy and high standards. But the true bio is
+          simpler: I'm a frontend developer driven by pure spite against inefficient layout and poor UX. My silence is
+          not aloofness; it's intense focus. I turn caffeine into clean, semantic markup.</p>
+      </section>
+
+      <!-- Goals in this program -->
+      <section data-testid="test-about-goals" class="about-section">
+        <h3 class="about-heading">Goals in the Frontend Wizards Program</h3>
+        <ul class="info-list">
+          <li class="list-item">Mastering advanced accessibility patterns (ARIA, keyboard navigation, screen reader
+            testing).</li>
+          <li class="list-item">Becoming fluent in complex CSS Grid/Flexbox interactions for highly dynamic, responsive
+            interfaces.</li>
+          <li class="list-item">Building robust, highly performant web applications that could run on a literal potato.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Areas of low confidence -->
+      <section data-testid="test-about-confidence" class="about-section">
+        <h3 class="about-heading">Areas of Low Confidence</h3>
+        <p>While I can brute-force almost any layout, deep-dive performance optimization, especially around bundle
+          splitting and complex Webpack/Rollup configurations, sometimes feels like fighting a black hole. Also, keeping
+          up with the JavaScript framework churn is a full-time job in itself.</p>
+      </section>
+
+      <!-- Note to future self -->
+      <section data-testid="test-about-future-note" class="about-section">
+        <h3 class="about-heading">A Note to Future Self</h3>
+        <p>Hey, Draq. Remember this feeling—the grind. Never forget the simple truth: you write code for users, not
+          compilers. Don't be too much of a Tsukishima; occasionally, share your knowledge. And for the love of all that
+          is holy, stick to one framework for more than six months.</p>
+      </section>
+
+      <section data-testid="test-about-extra" class="about-section">
+        <h3 class="about-heading">Extra Thoughts</h3>
+        <p>The "love of my life" hobby is an ongoing ticket. If anyone finds a human who appreciates a beautifully
+          centered modal and commits at 3 AM, please submit a pull request.</p>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

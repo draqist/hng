@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Draq The Beast</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <nav class="nav-bar" aria-label="Main Application Navigation">
+      <a href="index.html" class="nav-link">Profile Card</a>
+      <!-- Active link for this page -->
+      <a href="contact_us.html" class="nav-link active-page">Contact Us</a>
+      <a href="about_me.html" class="nav-link">About Me</a>
+    </nav>
+    <main role="region" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="page-heading">Contact Draq The Beast</h2>
+      <form id="contact-form" onsubmit="return validateForm(event)">
+
+        <div class="form-group">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" id="fullName" name="fullName" data-testid="test-contact-name" class="form-input" required
+            aria-describedby="error-name">
+          <div id="error-name" data-testid="test-contact-error-name" class="error-message">Full name is required.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" name="email" data-testid="test-contact-email" class="form-input" required
+            aria-describedby="error-email">
+          <div id="error-email" data-testid="test-contact-error-email" class="error-message">A valid email is required
+            (e.g., name@example.com).</div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" id="subject" name="subject" data-testid="test-contact-subject" class="form-input" required
+            aria-describedby="error-subject">
+          <div id="error-subject" data-testid="test-contact-error-subject" class="error-message">Subject is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" data-testid="test-contact-message" class="form-textarea" required
+            aria-describedby="error-message-length"></textarea>
+          <div id="error-message-length" data-testid="test-contact-error-message" class="error-message">Message must be
+            at least 10 characters long.</div>
+        </div>
+
+        <button type="submit" data-testid="test-contact-submit" class="submit-button">
+          Send Message
+        </button>
+      </form>
+
+      <div id="contact-success" data-testid="test-contact-success" class="success-message" style="display: none;">
+        Thank you, Draq has received your message. You may now be worthy.
+      </div>
+    </main>
+  </div>
+
+  <script type="text/javascript">
+    const contactForm = document.getElementById('contact-form');
+    const successMessage = document.getElementById('contact-success');
+
+    function validateForm(event) {
+    event.preventDefault();
+
+    // collect inputs and errors
+    const nameInput = document.getElementById("fullName");
+    const emailInput = document.getElementById("email");
+    const subjectInput = document.getElementById("subject");
+    const messageInput = document.getElementById("message");
+
+    const nameError = document.getElementById("error-name");
+    const emailError = document.getElementById("error-email");
+    const subjectError = document.getElementById("error-subject");
+    const messageError = document.getElementById("error-message-length");
+
+    // reset error visibility
+    [nameError, emailError, subjectError, messageError].forEach(
+      (el) => (el.style.display = "none")
+    );
+    successMessage.style.display = "none";
+
+    let isValid = true;
+
+    // name validation
+    if (nameInput.value.trim() === "") {
+      nameError.style.display = "block";
+      isValid = false;
+    }
+
+    // email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value.trim())) {
+      emailError.style.display = "block";
+      isValid = false;
+    }
+
+    // subject validation
+    if (subjectInput.value.trim() === "") {
+      subjectError.style.display = "block";
+      isValid = false;
+    }
+
+    // message validation
+    if (messageInput.value.trim().length < 10) {
+      messageError.style.display = "block";
+      isValid = false;
+    }
+
+    // success
+    if (isValid) {
+      successMessage.style.display = "block";
+      contactForm.reset();
+    }
+  }
+
+  // Bind navigation
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const pageId = link.dataset.page;
+      showPage(pageId);
+      window.location.hash = pageId;
+    });
+  });
+
+  // Bind form
+  if (contactForm) {
+    contactForm.addEventListener("submit", validateForm);
+  }
+
+
+  </script>
+</body>
+
+</html>
