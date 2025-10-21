@@ -310,12 +310,12 @@
 
 <body>
 
-  <!-- Main Application Container -->
+
   <div class="app-container">
 
-    <!-- Navigation Bar -->
+
     <nav class="nav-bar" aria-label="Main Application Navigation">
-      <!-- Active link for this page -->
+
       <a href="index.html" class="nav-link active-page">Profile Card</a>
       <a href="contact_us.html" class="nav-link">Contact Us</a>
       <a href="about_me.html" class="nav-link">About Me</a>
@@ -363,7 +363,7 @@
           <li>
             <a data-testid="test-user-social-linkedin" href="https://linkedin.com/in/abdullah-abdulfatah-125189209"
               target="_blank" rel="noopener noreferrer" class="social-link">
-              <!-- LinkedIn Icon -->
+
               <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.366-4-3.235-4 0v5.604h-3v-11h3v1.765c1.395-2.316 5-2.103 5 2.504v6.731z" />
@@ -401,15 +401,9 @@
   </div>
 
   <script type="text/javascript">
-    // --- Stage 0 Clock Functionality ---
-
-    /**
-     * Updates the display element with the current timestamp in milliseconds.
-     */
     function updateTime() {
       const timeElement = document.querySelector('[data-testid="test-user-time"]');
       if (timeElement) {
-        // Date.now() returns the timestamp in milliseconds, as required.
         timeElement.textContent = Date.now().toString();
       }
     }

@@ -67,73 +67,64 @@
     const successMessage = document.getElementById('contact-success');
 
     function validateForm(event) {
-    event.preventDefault();
+      event.preventDefault();
 
-    // collect inputs and errors
-    const nameInput = document.getElementById("fullName");
-    const emailInput = document.getElementById("email");
-    const subjectInput = document.getElementById("subject");
-    const messageInput = document.getElementById("message");
+      const nameInput = document.getElementById("fullName");
+      const emailInput = document.getElementById("email");
+      const subjectInput = document.getElementById("subject");
+      const messageInput = document.getElementById("message");
 
-    const nameError = document.getElementById("error-name");
-    const emailError = document.getElementById("error-email");
-    const subjectError = document.getElementById("error-subject");
-    const messageError = document.getElementById("error-message-length");
+      const nameError = document.getElementById("error-name");
+      const emailError = document.getElementById("error-email");
+      const subjectError = document.getElementById("error-subject");
+      const messageError = document.getElementById("error-message-length");
 
-    // reset error visibility
-    [nameError, emailError, subjectError, messageError].forEach(
-      (el) => (el.style.display = "none")
-    );
-    successMessage.style.display = "none";
+      [nameError, emailError, subjectError, messageError].forEach(
+        (el) => (el.style.display = "none")
+      );
+      successMessage.style.display = "none";
 
-    let isValid = true;
+      let isValid = true;
 
-    // name validation
-    if (nameInput.value.trim() === "") {
-      nameError.style.display = "block";
-      isValid = false;
+      if (nameInput.value.trim() === "") {
+        nameError.style.display = "block";
+        isValid = false;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailInput.value.trim())) {
+        emailError.style.display = "block";
+        isValid = false;
+      }
+
+      if (subjectInput.value.trim() === "") {
+        subjectError.style.display = "block";
+        isValid = false;
+      }
+
+      if (messageInput.value.trim().length < 10) {
+        messageError.style.display = "block";
+        isValid = false;
+      }
+
+      if (isValid) {
+        successMessage.style.display = "block";
+        contactForm.reset();
+      }
     }
 
-    // email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(emailInput.value.trim())) {
-      emailError.style.display = "block";
-      isValid = false;
-    }
-
-    // subject validation
-    if (subjectInput.value.trim() === "") {
-      subjectError.style.display = "block";
-      isValid = false;
-    }
-
-    // message validation
-    if (messageInput.value.trim().length < 10) {
-      messageError.style.display = "block";
-      isValid = false;
-    }
-
-    // success
-    if (isValid) {
-      successMessage.style.display = "block";
-      contactForm.reset();
-    }
-  }
-
-  // Bind navigation
-  navLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const pageId = link.dataset.page;
-      showPage(pageId);
-      window.location.hash = pageId;
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const pageId = link.dataset.page;
+        showPage(pageId);
+        window.location.hash = pageId;
+      });
     });
-  });
 
-  // Bind form
-  if (contactForm) {
-    contactForm.addEventListener("submit", validateForm);
-  }
+    if (contactForm) {
+      contactForm.addEventListener("submit", validateForm);
+    }
 
 
   </script>
